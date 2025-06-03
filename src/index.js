@@ -31,7 +31,7 @@ function formatDate(date) {
     "Saturday",
   ];
 
-  let formattedDay = days[day];
+  let formattedDay = days[date.getDay()];
   return `${formattedDay} ${hours}:${minutes}`;
 }
 
