@@ -9,7 +9,6 @@ function search(event) {
 
   let searchInputElement = document.querySelector("#search-input");
   searchCity(searchInputElement.value);
-  
 }
 
 function formatDate(date) {
@@ -56,3 +55,5 @@ function dispayTemperature(response) {
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
+
+searchCity("Paris");
