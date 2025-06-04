@@ -41,6 +41,7 @@ function dispayTemperature(response) {
   let cityElement = document.querySelector("#current-city");
   let descriptionElement = document.querySelector("#description");
   let currentTime = document.querySelector("#time");
+  let date = new Date(response.time * 1000);
 
   cityElement.innerHTML = response.data.city;
   currentTemperature.innerHTML = temperature;
