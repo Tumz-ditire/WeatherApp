@@ -47,14 +47,15 @@ function dispayTemperature(response) {
   let date = new Date(response.time * 1000);
   let currentHumidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind-speed");
+  let weatherIcon = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
   currentTemperature.innerHTML = temperature;
   descriptionElement.innerHTML = response.data.condition.description;
-  currentDateElement.innerHTML = formatDate(date);
+  currentDateELement.innerHTML = formatDate(date);
   currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
-
+  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
 }
 
 let searchForm = document.querySelector("#search-form");
