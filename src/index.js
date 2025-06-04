@@ -44,7 +44,7 @@ function dispayTemperature(response) {
   let cityElement = document.querySelector("#current-city");
   let descriptionElement = document.querySelector("#description");
   let currentDateELement = document.querySelector("#current-date");
-  let date = new Date(response.time * 1000);
+  let date = new Date(response.data.time * 1000);
   let currentHumidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind-speed");
   let weatherIcon = document.querySelector("#icon");
