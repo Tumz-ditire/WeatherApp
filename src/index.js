@@ -45,11 +45,15 @@ function dispayTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let currentDateELement = document.querySelector("#current-date");
   let date = new Date(response.time * 1000);
-  
+  let currentHumidity = document.querySelector("#humidity");
+  let windSpeed = document.querySelector("#wind-speed");
+
   cityElement.innerHTML = response.data.city;
   currentTemperature.innerHTML = temperature;
   descriptionElement.innerHTML = response.data.condition.description;
   currentDateElement.innerHTML = formatDate(date);
+  currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
+  windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
 
 }
 
