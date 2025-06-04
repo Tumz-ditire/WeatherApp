@@ -40,20 +40,15 @@ function dispayTemperature(response) {
   let currentTemperature = document.querySelector("#current-temperature");
   let cityElement = document.querySelector("#current-city");
   let descriptionElement = document.querySelector("#description");
-  let currentTime = document.querySelector("#time");
+  let currentDateELement = document.querySelector("#current-date");
   let date = new Date(response.time * 1000);
-
+  
   cityElement.innerHTML = response.data.city;
   currentTemperature.innerHTML = temperature;
   descriptionElement.innerHTML = response.data.condition.description;
-  currentTime.innerHTML = formatDate(date);
+  currentDateElement.innerHTML = formatDate(date);
 
 }
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
-
-let currentDateELement = document.querySelector("#current-date");
-let currentDate = new Date();
-
-currentDateELement.innerHTML = formatDate(currentDate);
