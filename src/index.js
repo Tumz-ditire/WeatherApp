@@ -49,13 +49,12 @@ function dispayTemperature(response) {
   let windSpeed = document.querySelector("#wind-speed");
   let weatherIcon = document.querySelector("#icon");
 
-  console.log(response.data);
   cityElement.innerHTML = response.data.city;
   currentTemperature.innerHTML = temperature;
   descriptionElement.innerHTML = response.data.condition.description;
   currentDateELement.innerHTML = formatDate(date);
-  currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
-  windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
+  currentHumidity.innerHTML = `${response.data.temperature.humidity}% class="current-details`;
+  windSpeed.innerHTML = `${response.data.wind.speed}km/h class="current-details`;
   weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
 }
 
