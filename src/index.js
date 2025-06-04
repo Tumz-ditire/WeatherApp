@@ -49,6 +49,7 @@ function dispayTemperature(response) {
   let windSpeed = document.querySelector("#wind-speed");
   let weatherIcon = document.querySelector("#icon");
 
+  console.log(response.data);
   cityElement.innerHTML = response.data.city;
   currentTemperature.innerHTML = temperature;
   descriptionElement.innerHTML = response.data.condition.description;
