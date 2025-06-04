@@ -40,10 +40,13 @@ function dispayTemperature(response) {
   let currentTemperature = document.querySelector("#current-temperature");
   let cityElement = document.querySelector("#current-city");
   let descriptionElement = document.querySelector("#description");
-  
+  let currentTime = document.querySelector("#time");
+
   cityElement.innerHTML = response.data.city;
   currentTemperature.innerHTML = temperature;
   descriptionElement.innerHTML = response.data.condition.description;
+  currentTime.innerHTML = formatDate(date);
+
 }
 
 let searchForm = document.querySelector("#search-form");
