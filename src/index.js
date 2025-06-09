@@ -37,7 +37,7 @@ function formatDate(date) {
 }
 
 function dispayTemperature(response) {
-  let temperature = Math.round(response.data.temperature.current);
+  let temperature = response.data.temperature.current;
   let currentTemperature = document.querySelector("#current-temperature");
   let cityElement = document.querySelector("#current-city");
   let descriptionElement = document.querySelector("#description");
@@ -49,7 +49,7 @@ function dispayTemperature(response) {
 
   console.log(response.data);
   cityElement.innerHTML = response.data.city;
-  currentTemperature.innerHTML = temperature;
+  currentTemperature.innerHTML = Math.round(temperature);
   currentDateELement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
   currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
