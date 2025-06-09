@@ -53,7 +53,7 @@ function dispayTemperature(response) {
   cityElement.innerHTML = response.data.city;
   currentTemperature.innerHTML = temperature;
   currentDateELement.innerHTML = formatDate(date);
-  descriptionElement.innerHTML = `${response.data.condition.description}`;
+  descriptionElement.innerHTML = response.data.condition.description;
   currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
   weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
