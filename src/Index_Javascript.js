@@ -48,7 +48,7 @@ function displayTemperature(response) {
   console.log(response.data);
   cityElement.innerHTML = response.data.city;
   currentTemperature.innerHTML = Math.round(temperature);
-  currentDateELement.innerHTML = formatDate(date);
+  currentDateElement.innerHTML = formatDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
   currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
