@@ -34,7 +34,7 @@ function formatDate(date) {
   return `${formattedDay} ${hours}:${minutes}`;
 }
 
-function dispayTemperature(response) {
+function displayTemperature(response) {
   let temperature = response.data.temperature.current;
   let currentTemperature = document.querySelector("#current-temperature");
   let cityElement = document.querySelector("#current-city");
