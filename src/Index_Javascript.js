@@ -58,4 +58,4 @@ function dispayTemperature(response) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
-searchCity("Paris");
+searchCity("Johannesburg");
